@@ -4,5 +4,7 @@
     {{ title }}
   </h1>
 </div>
-<input type="text" (keyup)="input_typed($event)"/>
+<input type="text" (keyup)="input_typed($event)" value="{{word}}" pattern="^[a-zA-Z1-9].*" patternControl/>
 <h3>{{word}}</h3>
+<h4>{{alerts}}</h4>
+<input type="button" (click)="submit_word()" value="Submit Word"/>
