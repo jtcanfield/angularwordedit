@@ -27,7 +27,7 @@ export class indexComponent {
     console.log("hello")
     console.log(this.router)
     console.log(this.activatedroute)
-    this.router.navigate(['/word']);
+    // this.router.navigate(['/word']);
   }
   hello_button_clicked() {
       this.data = new Observable(observer => {
