@@ -16,19 +16,6 @@ export class typewordComponent {
   }
 
   input_typed(event: any) {
-    this.data = new Observable(observer => {
-      // console.log(this);
-      // console.log(this.data);
-      // console.log(observer);
-      console.log(event.target.value)
-      this.word = event.target.value;
-        // this.word = "Started";
-        // observer.next('First Thing');
-        // observer.next('Second Thing');
-        // observer.complete();
-    });
-
-    let subscription = this.data.forEach(v => this.values.push(v))
-      .then(() => this.status = "Ended");
+    this.word = event.target.value;
   }
 }
