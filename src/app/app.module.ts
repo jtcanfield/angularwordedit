@@ -1,17 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Router } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+import { indexComponent } from './routes/index/index.component';
+import { typewordComponent } from './routes/typeword/typeword.component';
 
+const appRoutes: Routes = [
+  {path: '', component: indexComponent},
+  {path: 'word', component: typewordComponent},
+  { path: '**', redirectTo: '', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    indexComponent,
+    typewordComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes,{
+        enableTracing: true, })
   ],
   providers: [],
   bootstrap: [AppComponent]

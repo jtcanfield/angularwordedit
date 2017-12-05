@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    HOME
+  </h1>
+</div>
+
+<h6 style="margin-bottom: 0">VALUES:</h6>
+<div *ngFor="let value of values">{{ value }}</div>
+
+<h6 style="margin-bottom: 0">STATUS:</h6>
+<div>{{status}}</div>
+<input type="button" (click)="hello_button_clicked()" value="HELLO"/>
+
+
+<input type="button" (click)="router_checker_button()" value="Check Route"/>
