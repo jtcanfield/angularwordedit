@@ -8,8 +8,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent {
   title = 'app';
-  private data: Observable<Array<number>>;
-  private values: Array<number> = [];
+  private data: Observable<Array<string>>;
+  private values: Array<string> = [];
   private anyErrors: boolean;
   private finished: boolean;
 
