@@ -6,10 +6,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { indexComponent } from './routes/index/index.component';
 import { typewordComponent } from './routes/typeword/typeword.component';
+import { colorwordComponent } from './routes/colorword/colorword.component';
 
 const appRoutes: Routes = [
   {path: '', component: indexComponent},
   {path: 'word', component: typewordComponent},
+  {path: 'color', component: colorwordComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -17,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     indexComponent,
-    typewordComponent
+    typewordComponent,
+    colorwordComponent
   ],
   imports: [
     BrowserModule,

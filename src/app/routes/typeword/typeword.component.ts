@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { NgForm, FormControl} from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-typeword',
@@ -14,7 +15,10 @@ export class typewordComponent {
   private word = "";
   private data: Observable<string>;
 
-  constructor() {
+  constructor(
+    private activatedroute: ActivatedRoute,
+    private router: Router,
+  ) {
   }
 
   input_typed(event: any) {
@@ -31,6 +35,7 @@ export class typewordComponent {
       this.alerts = "Please Enter a Word";
     } else {
       console.log("Valid")
+      this.router.navigate(['/color']);
     }
   }
 }
