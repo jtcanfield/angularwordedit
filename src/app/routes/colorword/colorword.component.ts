@@ -21,6 +21,6 @@ export class colorwordComponent {
     console.log("hello")
     console.log(this.router)
     console.log(this.activatedroute)
-    // this.router.navigate(['/word']);
+    this.router.navigate(['/word']);
   }
 }
